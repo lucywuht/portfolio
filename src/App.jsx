@@ -1,19 +1,30 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import ProjectGrid from './components/ProjectGrid';
 import Footer from './components/Footer';
+import Home from './pages/Home';
+import About from './pages/About';
+import Fun from './pages/Fun';
+import Resume from './pages/Resume';
+import RacheLLM from './pages/RacheLLM';
 
 function App() {
     return (
-        <div className="min-h-screen bg-background">
-            <Navbar />
-            <main>
-                <Hero />
-                <ProjectGrid />
-            </main>
-            <Footer />
-        </div>
+        <Router basename="/portfolio"> {/* Important for GitHub Pages deployment */}
+            <div className="min-h-screen bg-background flex flex-col justify-between">
+                <Navbar />
+                <main className="flex-grow">
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/fun" element={<Fun />} />
+                        <Route path="/resume" element={<Resume />} />
+                        <Route path="/rachellm" element={<RacheLLM />} />
+                    </Routes>
+                </main>
+                <Footer />
+            </div>
+        </Router>
     );
 }
 
