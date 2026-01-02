@@ -7,6 +7,7 @@ import About from './pages/About';
 import Fun from './pages/Fun';
 import Resume from './pages/Resume';
 import RacheLLM from './pages/RacheLLM';
+import ProjectDetail from './pages/ProjectDetail';
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                 <main className="flex-grow">
                     <Routes>
                         <Route path="/" element={<Home />} />
+                        <Route path="/project/:id" element={<ProjectDetail />} />
                         <Route path="/about" element={<About />} />
                         <Route path="/fun" element={<Fun />} />
                         <Route path="/resume" element={<Resume />} />

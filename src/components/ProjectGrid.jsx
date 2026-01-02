@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const projects = [
     {
@@ -40,7 +41,7 @@ const ProjectGrid = () => {
         <section id="work" className="py-20 px-6 md:px-12 max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24">
                 {projects.map((project) => (
-                    <div key={project.id} className="group cursor-pointer">
+                    <Link to={`/project/${project.id}`} key={project.id} className="group cursor-pointer block">
                         <div className={`w-full aspect-[4/3] ${project.color} mb-6 overflow-hidden rounded-sm relative`}>
                             {/* Placeholder for project thumbnail */}
                             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/5">
@@ -57,7 +58,7 @@ const ProjectGrid = () => {
                             <span>•</span>
                             <span>{project.year}</span>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </section>
