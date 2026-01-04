@@ -7,10 +7,11 @@ const Hero = () => {
                 {/* Left Column: Heading */}
                 <div className="flex-1">
                     <h1 className="text-5xl md:text-7xl font-serif leading-[1.1] text-black mb-8">
-                        I'm Lucy. I design and build for <span className="italic font-light">users</span>.
+                        I'm Lucy. 
+                        I design and build for <span className="italic font-light">users</span>.
                     </h1>
                     <p className="text-gray-600 max-w-md text-lg leading-relaxed">
-                        I bridge the gap between design and code, creating seamless digital experiences with a focus on polished interactions.
+                        I translate business requirements into seamless user journeys that people enjoy.
                     </p>
                 </div>
 
